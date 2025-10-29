@@ -1,6 +1,7 @@
 // i18n configuration
-export { es } from './locales/es';
-export { en } from './locales/en';
-export type { Translation } from './locales/es';
+import { es } from './locales/es';
+import { en } from './locales/en';
 
+export { es, en };
+export type Translation = typeof es;
 export type Locale = 'es' | 'en';

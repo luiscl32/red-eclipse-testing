@@ -1,6 +1,6 @@
 // Custom hook for language management
-import { useState, useEffect } from 'react';
-import { Locale, Translation, es, en } from '../i18n';
+import { useEffect, useState } from 'react';
+import { type Locale, type Translation, en, es } from '../i18n';
 
 const translations: Record<Locale, Translation> = {
   es,

@@ -1,8 +1,14 @@
 // Single Responsibility: Home page composition
+import { Hero, About, Work, Collaborations, Contact } from '../components/sections';
+
 const Home = () => {
   return (
-    <div className="pt-16">
-      hello world
+    <div>
+      <Hero />
+      <About />
+      <Work />
+      <Collaborations />
+      <Contact />
     </div>
   );
 };

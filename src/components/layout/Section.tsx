@@ -15,12 +15,6 @@ const Section = ({
   background = 'light',
   className = ''
 }: SectionProps) => {
-  const bgStyles = {
-    light: 'bg-white',
-    dark: 'bg-gray-900 text-white',
-    gradient: 'bg-gradient-to-br from-blue-50 to-indigo-100'
-  };
-
   return (
     <motion.section
       id={id}
@@ -28,7 +22,7 @@ const Section = ({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={fadeInUp}
-      className={`py-20 ${bgStyles[background]} ${className}`}
+      className={`py-20 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {children}

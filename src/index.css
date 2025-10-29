@@ -3,5 +3,7 @@
 @layer base {
   body {
     @apply m-0 min-h-screen antialiased;
+    background: linear-gradient(135deg, #132440 0%, #16476A 33%, #3B9797 66%, #16476A 100%);
+    background-attachment: fixed;
   }
 }
