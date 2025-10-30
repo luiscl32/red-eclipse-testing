@@ -7,6 +7,33 @@ import { useLanguage } from '../../hooks/useLanguage';
 const Hero = () => {
   const { t } = useLanguage();
 
+  // Function to render description with "Red Eclipse Testing" in bold and line breaks
+  const renderDescription = () => {
+    const description = t.hero.description;
+    const lines = description.split('\\n');
+
+    return lines.map((line, index) => {
+      const parts = line.split('Red Eclipse Testing');
+
+      const lineContent = parts.length > 1 ? (
+        <>
+          {parts[0]}
+          <span className="font-bold">Red Eclipse Testing</span>
+          {parts[1]}
+        </>
+      ) : (
+        <>{line}</>
+      );
+
+      return (
+        <span key={index}>
+          {lineContent}
+          {index < lines.length - 1 && <br />}
+        </span>
+      );
+    });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background Image with Fade Animation */}
@@ -33,11 +60,11 @@ const Hero = () => {
           animate="visible"
           variants={fadeInUp}
         >
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight" style={{ color: '#BF092F' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white">
             {t.hero.title}
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white">
-            {t.hero.description}
+            {renderDescription()}
           </p>
         </motion.div>
       </div>

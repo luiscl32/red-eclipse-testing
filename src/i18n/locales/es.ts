@@ -7,8 +7,8 @@ export const es = {
     contact: 'Contacto'
   },
   hero: {
-    title: 'Jugamos. Rompemos y Mejoramos tu juego.',
-    description: 'Testing profesional para videojuegos indie y AAA. En Red Eclipse Testing analizamos, jugamos y desarmamos tu juego para garantizar una experiencia libre de errores, fluida y pulida antes del lanzamiento. Encontramos los bugs antes que tus jugadores, para que tu visión brille tal como la imaginaste.',
+    title: 'Jugamos, Rompemos y Mejoramos tu juego.',
+    description: 'Testing profesional para videojuegos indie y AAA.\nEn Red Eclipse Testing analizamos, jugamos y desarmamos tu juego para garantizar una experiencia libre de errores, fluida y pulida antes del lanzamiento.\nEncontramos los bugs antes que tus jugadores, para que tu visión brille tal como la imaginaste.',
     cta: 'Comenzar ahora'
   },
   about: {

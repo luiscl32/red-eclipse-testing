@@ -20,36 +20,48 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-secondary/95 backdrop-blur-sm shadow-lg z-50">
+    <header className="fixed top-0 w-full bg-black/60 backdrop-blur-sm shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Logo" className="h-8 sm:h-10" />
+            <img src={logo} alt="Logo" className="h-12 sm:h-14 md:h-16 opacity-90" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-white hover:text-teal transition-colors text-sm lg:text-base"
+              className="text-white transition-all text-sm lg:text-base px-3 py-2 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               {t.nav.about}
             </button>
             <button
               onClick={() => scrollToSection('work')}
-              className="text-white hover:text-teal transition-colors text-sm lg:text-base"
+              className="text-white transition-all text-sm lg:text-base px-3 py-2 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               {t.nav.work}
             </button>
             <button
               onClick={() => scrollToSection('collaborations')}
-              className="text-white hover:text-teal transition-colors text-sm lg:text-base"
+              className="text-white transition-all text-sm lg:text-base px-3 py-2 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               {t.nav.collaborations}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-white hover:text-teal transition-colors text-sm lg:text-base"
+              className="text-white transition-all text-sm lg:text-base px-3 py-2 rounded-lg"
+              style={{ backgroundColor: 'transparent' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               {t.nav.contact}
             </button>
@@ -95,29 +107,41 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-teal/20">
+          <div className="md:hidden py-4 border-t border-primary/20">
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-white hover:text-teal transition-colors text-left py-2"
+                className="text-white transition-all text-left py-2 px-3 rounded-lg"
+                style={{ backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               >
                 {t.nav.about}
               </button>
               <button
                 onClick={() => scrollToSection('work')}
-                className="text-white hover:text-teal transition-colors text-left py-2"
+                className="text-white transition-all text-left py-2 px-3 rounded-lg"
+                style={{ backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               >
                 {t.nav.work}
               </button>
               <button
                 onClick={() => scrollToSection('collaborations')}
-                className="text-white hover:text-teal transition-colors text-left py-2"
+                className="text-white transition-all text-left py-2 px-3 rounded-lg"
+                style={{ backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               >
                 {t.nav.collaborations}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-white hover:text-teal transition-colors text-left py-2"
+                className="text-white transition-all text-left py-2 px-3 rounded-lg"
+                style={{ backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(191, 9, 47, 0.7)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               >
                 {t.nav.contact}
               </button>
