@@ -20,9 +20,9 @@ const Section = ({
       id={id}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
       variants={fadeInUp}
-      className={`py-20 ${className}`}
+      className={`py-12 sm:py-16 md:py-20 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {children}

@@ -8,8 +8,8 @@ const Collaborations = () => {
   return (
     <Section id="collaborations" background="light">
       <div className="text-center max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6 text-white">{t.collaborations.title}</h2>
-        <p className="text-xl text-white">{t.collaborations.description}</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white">{t.collaborations.title}</h2>
+        <p className="text-base sm:text-lg md:text-xl text-white">{t.collaborations.description}</p>
       </div>
     </Section>
   );

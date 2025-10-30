@@ -1,6 +1,6 @@
-// Single Responsibility: Application routing configuration
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from '../components/layout';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Footer, Header } from '../components/layout';
 import Home from '../pages/Home';
 
 const AppRouter = () => {
@@ -11,7 +11,6 @@ const AppRouter = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Add more routes here as needed */}
           </Routes>
         </main>
         <Footer />
