@@ -15,7 +15,11 @@ export const en: Translation = {
   },
   about: {
     title: 'About Us',
-    description: 'At Red Eclipse Testing, we specialize in professional video game testing, offering comprehensive quality assurance services for indie developers and AAA studios. Our team of experienced testers is dedicated to identifying bugs, performance issues, and user experience flaws before launch. We use proven methodologies and specialized tools to ensure your game reaches the market in its best version, allowing your creative vision to shine without technical obstacles.'
+    description: [
+      'At **Red Eclipse Testing**, we specialize in professional video game testing, offering comprehensive quality assurance services for indie developers and AAA studios.',
+      'Our team of experienced testers is dedicated to identifying bugs, performance issues, and user experience flaws before launch.',
+      'We use proven methodologies and specialized tools to ensure your game reaches the market in its best version, allowing your creative vision to shine without technical obstacles.'
+    ]
   },
   work: {
     title: 'Our Work',

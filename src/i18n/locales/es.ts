@@ -13,7 +13,11 @@ export const es = {
   },
   about: {
     title: 'Sobre Nosotros',
-    description: 'En Red Eclipse Testing nos especializamos en el testing profesional de videojuegos, ofreciendo servicios integrales de aseguramiento de calidad para desarrolladores indie y estudios AAA. Nuestro equipo de testers experimentados se dedica a identificar bugs, problemas de rendimiento y fallos de experiencia de usuario antes del lanzamiento. Utilizamos metodologías probadas y herramientas especializadas para garantizar que tu juego llegue al mercado en su mejor versión, permitiendo que tu visión creativa brille sin obstáculos técnicos.'
+    description: [
+      'En **Red Eclipse Testing** nos especializamos en el testing profesional de videojuegos, ofreciendo servicios integrales de aseguramiento de calidad para desarrolladores indie y estudios AAA.',
+      'Nuestro equipo de testers experimentados se dedica a identificar bugs, problemas de rendimiento y fallos de experiencia de usuario antes del lanzamiento.',
+      'Utilizamos metodologías probadas y herramientas especializadas para garantizar que tu juego llegue al mercado en su mejor versión, permitiendo que tu visión creativa brille sin obstáculos técnicos.'
+    ]
   },
   work: {
     title: 'Nuestro Trabajo',

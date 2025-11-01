@@ -1,7 +1,18 @@
 // About section
 import { Section } from '../layout';
 import { useLanguage } from '../../hooks/useLanguage';
-import redEclipseCard from '../../assets/red-eclipse-card.png';
+import logo from '../../assets/logo.png';
+
+// Helper function to convert **text** to bold
+const formatText = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
 
 const About = () => {
   const { t } = useLanguage();
@@ -14,20 +25,22 @@ const About = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Image */}
-          <div className="order-2 md:order-1">
+          {/* Logo */}
+          <div className="order-2 md:order-1 flex items-center justify-center">
             <img
-              src={redEclipseCard}
-              alt="Red Eclipse Testing"
-              className="w-full h-auto rounded-lg shadow-lg"
+              src={logo}
+              alt="Red Eclipse Testing Logo"
+              className="w-full h-full object-contain"
             />
           </div>
 
           {/* Description */}
-          <div className="order-1 md:order-2">
-            <p className="text-base sm:text-lg text-white leading-relaxed">
-              {t.about.description}
-            </p>
+          <div className="order-1 md:order-2 space-y-4">
+            {t.about.description.map((paragraph, index) => (
+              <p key={index} className="text-base sm:text-lg text-white leading-relaxed">
+                {formatText(paragraph)}
+              </p>
+            ))}
           </div>
         </div>
       </div>
