@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# Red Eclipse Testing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web del proyecto Red Eclipse Testing construido con React, TypeScript, Vite y Tailwind CSS.
 
-Currently, two official plugins are available:
+## Requisitos Previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Node.js
+Este proyecto requiere **Node.js versión 21.7.3**.
 
-## React Compiler
+Para instalar Node.js 21.7.3:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Usando nvm (recomendado)
+nvm install 21.7.3
+nvm use 21.7.3
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# O descarga directamente desde
+# https://nodejs.org/download/release/v21.7.3/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### pnpm
+Este proyecto utiliza **pnpm** como gestor de paquetes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para instalar pnpm:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Usando npm (viene con Node.js)
+npm install -g pnpm
+
+# O usando Homebrew (macOS)
+brew install pnpm
+
+# O usando el script de instalación
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
+
+Verifica la instalación:
+```bash
+pnpm --version
+```
+
+## Instalación
+
+1. Clona el repositorio
+```bash
+git clone <url-del-repositorio>
+cd red-eclipse-testing
+```
+
+2. Instala las dependencias
+```bash
+pnpm install
+```
+
+## Desarrollo
+
+Para iniciar el servidor de desarrollo:
+
+```bash
+pnpm dev
+```
+
+El sitio estará disponible en `http://localhost:5173`
+
+## Build
+
+Para crear una build de producción:
+
+```bash
+pnpm build
+```
+
+Los archivos compilados se generarán en la carpeta `dist/`
+
+Para previsualizar la build de producción localmente:
+
+```bash
+pnpm preview
+```
+
+## Linting
+
+Para ejecutar el linter:
+
+```bash
+pnpm lint
+```
+
+## Deploy
+
+El sitio se deploya automáticamente a GitHub Pages cuando se hace push a la rama `main`.
+
+Para más información sobre la configuración de GitHub Pages, consulta [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)
+
+## Stack Tecnológico
+
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Superset tipado de JavaScript
+- **Vite** - Build tool y dev server
+- **Tailwind CSS 4** - Framework de CSS utility-first
+- **Framer Motion** - Biblioteca de animaciones
+- **React Router** - Enrutamiento
+
+## Tecnologías y Herramientas
+
+- Hot Module Replacement (HMR) para desarrollo rápido
+- ESLint para análisis de código
+- PostCSS para procesamiento de CSS
+- GitHub Actions para CI/CD automático
