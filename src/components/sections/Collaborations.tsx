@@ -1,6 +1,7 @@
 // Collaborations section
 import { Section } from '../layout';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useInView } from '../../hooks/useInView';
 import { useState } from 'react';
 import tt7Logo from '../../assets/TT7-logo.png';
 import tt7Bg from '../../assets/TIT.jpg';
@@ -42,26 +43,26 @@ const CollaborationCard = ({ name, logo, backgroundImage, games }: Collaboration
       />
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center p-8">
-        <div className={`flex-1 flex items-center justify-center ${isHovered ? '' : 'pb-0'}`}>
-          {/* Logo */}
-          <div
-            className={`transition-all duration-700 ease-out ${
-              isHovered ? 'translate-y-[-30px]' : 'translate-y-0'
-            }`}
-          >
-            <img
-              src={logo}
-              alt={name}
-              className="w-48 h-48 object-contain"
-            />
-          </div>
+      <div className="relative h-full flex flex-col items-center justify-center p-8">
+        {/* Logo */}
+        <div
+          className={`transition-all duration-700 ease-out ${
+            isHovered ? 'w-40 h-40 mb-6' : 'w-48 h-48'
+          }`}
+        >
+          <img
+            src={logo}
+            alt={name}
+            className="w-full h-full object-contain"
+          />
         </div>
 
         {/* Game info - fades in on hover */}
         <div
           className={`text-center transition-all duration-700 ${
-            isHovered ? 'opacity-100 translate-y-0 flex-1 flex flex-col justify-start' : 'opacity-0 translate-y-4 h-0'
+            isHovered
+              ? 'opacity-100 translate-y-0 max-h-96'
+              : 'opacity-0 translate-y-4 max-h-0 overflow-hidden'
           }`}
         >
           <h3 className="text-2xl font-bold text-white mb-4">{name}</h3>
@@ -86,6 +87,7 @@ const CollaborationCard = ({ name, logo, backgroundImage, games }: Collaboration
 
 const Collaborations = () => {
   const { t } = useLanguage();
+  const cardsView = useInView({ threshold: 0.2, triggerOnce: false });
 
   const collaborationsData = [
     {
@@ -109,15 +111,24 @@ const Collaborations = () => {
           {t.collaborations.title}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div ref={cardsView.ref} className="grid md:grid-cols-2 gap-8">
           {collaborationsData.map((collab, index) => (
-            <CollaborationCard
+            <div
               key={index}
-              name={collab.name}
-              logo={collab.logo}
-              backgroundImage={collab.backgroundImage}
-              games={collab.games}
-            />
+              className={`transition-all duration-700 ${
+                cardsView.isInView
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              <CollaborationCard
+                name={collab.name}
+                logo={collab.logo}
+                backgroundImage={collab.backgroundImage}
+                games={collab.games}
+              />
+            </div>
           ))}
         </div>
       </div>

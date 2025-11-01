@@ -1,9 +1,31 @@
 @import "tailwindcss";
 
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply h-full;
+    background: #0a0000;
+    overflow-x: hidden;
+  }
+
   body {
-    @apply m-0 min-h-screen antialiased;
-    background: linear-gradient(135deg, #132440 0%, #16476A 33%, #3B9797 66%, #16476A 100%);
+    @apply m-0 antialiased;
+    background: linear-gradient(135deg, #0a0000 0%, #1a0000 33%, #3a0000 66%, #1a0000 100%);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root {
+    @apply min-h-screen;
+    width: 100%;
   }
 }

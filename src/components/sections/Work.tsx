@@ -63,8 +63,8 @@ const techniqueIcons = [AdHocIcon, ProgressionIcon, RegressionIcon];
 
 const Work = () => {
   const { t } = useLanguage();
-  const servicesView = useInView({ threshold: 0.1 });
-  const techniquesView = useInView({ threshold: 0.1 });
+  const servicesView = useInView({ threshold: 0.1, triggerOnce: false });
+  const techniquesView = useInView({ threshold: 0.1, triggerOnce: false });
 
   return (
     <Section id="work" background="dark">

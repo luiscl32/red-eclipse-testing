@@ -82,7 +82,26 @@ export const es = {
   },
   contact: {
     title: 'Contacto',
-    description: ''
+    name: 'Giovanni Delucchi',
+    emails: [
+      {
+        label: 'Contacto General',
+        email: 'contacto@redeclipsetesting.com'
+      },
+      {
+        label: 'Negocios',
+        email: 'negocios@redeclipsetesting.com'
+      },
+      {
+        label: 'Negocios',
+        email: 'business@redeclipsetesting.com'
+      }
+    ],
+    whatsapp: {
+      label: 'WhatsApp',
+      number: '+56929887892',
+      displayNumber: '🇨🇱 +56 9 2988 7892'
+    }
   }
 };
 
