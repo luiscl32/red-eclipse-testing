@@ -12,7 +12,6 @@ interface SectionProps {
 const Section = ({
   children,
   id,
-  background = 'light',
   className = ''
 }: SectionProps) => {
   return (
