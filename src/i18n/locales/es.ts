@@ -58,7 +58,27 @@ export const es = {
   },
   collaborations: {
     title: 'Colaboraciones',
-    description: ''
+    testedGame: 'Juego testeado',
+    partners: [
+      {
+        name: 'Tyrant Team 7',
+        games: [
+          {
+            title: 'Tiles in Time',
+            description: 'Un juego de puzzles donde debemos llenar un tablero en el menor tiempo posible esquivando obstáculos y pasando por diferentes épocas. Divertido y muy frenético.'
+          }
+        ]
+      },
+      {
+        name: 'Rain Cup Games',
+        games: [
+          {
+            title: 'WIP',
+            description: ''
+          }
+        ]
+      }
+    ]
   },
   contact: {
     title: 'Contacto',

@@ -60,7 +60,27 @@ export const en: Translation = {
   },
   collaborations: {
     title: 'Collaborations',
-    description: ''
+    testedGame: 'Tested Game',
+    partners: [
+      {
+        name: 'Tyrant Team 7',
+        games: [
+          {
+            title: 'Tiles in Time',
+            description: 'A puzzle game where you must fill a board in the shortest time possible while avoiding obstacles and traveling through different eras. Fun and very fast-paced.'
+          }
+        ]
+      },
+      {
+        name: 'Rain Cup Games',
+        games: [
+          {
+            title: 'WIP',
+            description: ''
+          }
+        ]
+      }
+    ]
   },
   contact: {
     title: 'Contact',
